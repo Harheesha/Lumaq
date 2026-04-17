@@ -1,34 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+:root {
+  /* palette */
+  --ink:        #0a0a0a;
+  --ink-2:      #111111;
+  --surface:    #161616;
+  --surface-2:  #1e1e1e;
+  --border:     rgba(255,255,255,0.07);
+  --border-2:   rgba(255,255,255,0.12);
+  --text:       #f2efe8;
+  --text-muted: rgba(242,239,232,0.42);
+  --text-dim:   rgba(242,239,232,0.22);
+
+  /* accent */
+  --lime:       #b8f03c;
+  --lime-dim:   rgba(184,240,60,0.12);
+  --lime-border: rgba(184,240,60,0.22);
+  --amber:      #e8940a;
+  --red:        #e03030;
+  --blue:       #1a5fd4;
+  --green:      #5bb827;
+
+  /* dashboard (light surface) */
+  --dash-bg:    #f5f3ee;
+  --dash-card:  #ffffff;
+  --dash-ink:   #0a0a0a;
+  --dash-muted: #888888;
+  --dash-border: rgba(0,0,0,0.08);
+  --dash-lime:  #5a8a00;
+  --dash-lime-bg: #eef7d6;
+  --dash-lime-border: #c5e070;
+
+  /* type */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* easing */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-  --ink: #0c0c0c;
-  --ink2: #444;
-  --ink3: #888;
-  --ink4: #bbb;
-  --surface: #f7f5f0;
-  --white: #ffffff;
-  --card: #fdfcf8;
-  --border: rgba(0,0,0,0.09);
-  --border2: rgba(0,0,0,0.14);
-  --lime: #b6ef3e;
-  --lime-dark: #7ab800;
-  --lime-bg: rgba(182,239,62,0.12);
-  --red: #e03030;
-  --amber: #e8960a;
-  --blue: #1a5fd4;
-}
-
-html { scroll-behavior: smooth; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--surface);
-  color: var(--ink);
-  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body);
+  background: var(--ink);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 a { text-decoration: none; color: inherit; }
-button { font-family: 'DM Sans', sans-serif; cursor: pointer; }
-input { font-family: 'DM Sans', sans-serif; }
+button { cursor: pointer; font-family: var(--font-body); }
+ul { list-style: none; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
